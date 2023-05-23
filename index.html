@@ -128,6 +128,10 @@
         <source media="(min-width:465px)" srcset="Picture/pic1.jpg">
         <img src="Picture/pic1.jpg" alt="Pics" style="width: 50%;">
       </picture>
+      <div>
+        <button onclick="play()">Play</button>
+        <button onclick="pause()">Pause</button>
+      </div>
     <p>場景切換</p>        
     <button class="button button1">上一個</button>
     <button class="button button2">下一個</button>
@@ -137,14 +141,17 @@
    
     </div>
     <script>
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
-        
-        slider.oninput = function() {
-          output.innerHTML = this.value;
-        }
-        </script>         
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+      
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+    </script>       
+    <audio id="music" src="../music_program/music/music1.mp3"></audio>
+
+    <script src="script.js"></script>  
         
 </body>
 </html>
