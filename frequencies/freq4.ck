@@ -26,9 +26,11 @@ SinOsc rightOscillator => dac;
 leftFrequency => leftOscillator.freq;
 rightFrequency => rightOscillator.freq;
 
-// Start the audio output
-while (true) {
-    // Generate and output the next samples for the left and right ears
-    leftOscillator.last() => _ => left;
-    rightOscillator.last() => _ => right;
-}
+
+15::second => now;
+// // Start the audio output
+// while (true) {
+//     // Generate and output the next samples for the left and right ears
+//     leftOscillator.last() => _ => left;
+//     rightOscillator.last() => _ => right;
+// }

@@ -6,7 +6,7 @@
 // get name
 me.arg(0) => string filename;
 
-if( filename.length() == 0 ) me.dir() + "my_recording.wav" => filename;
+if( filename.length() == 0 ) me.dir() + "freq4.wav" => filename;
 
 // pull samples from the dac
 dac => Gain g => WvOut w => blackhole;

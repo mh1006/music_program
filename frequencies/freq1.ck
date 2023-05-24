@@ -5,7 +5,7 @@
 432.0 => float baseFreq;
 
 SinOsc base => dac;
-0.5 => base.gain.
+0.1 => base.gain;
 baseFreq => base.freq;
 
 5::second => now;
