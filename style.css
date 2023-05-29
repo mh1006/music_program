@@ -1,0 +1,130 @@
+html {
+    background-color: #856341;
+  }
+  body {
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #e0b17f;
+    padding: 0 20px 20px 20px;
+    border: 1px solid black;
+  }
+  h1 {
+    text-align:center;
+    margin: 0;
+    padding: 20px 0;
+    color: #ffffff;
+    text-shadow: 3px 3px 1px black;
+  }
+  p{
+    text-align:center;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  .button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.buttona {
+    border: none;
+    color: white;
+    padding: 16px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.button3 {
+    background-color: white;
+    color: black;
+    border: 2px solid hsl(38, 43%, 52%);
+}
+
+.button3:hover {
+    background-color: #a38067;
+    color: white;
+}
+
+.slidecontainer {
+    width: 50%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+aside {
+    float: right;
+    border: 1px solid #000;
+    height: 500px;
+    padding: 10px;
+    background-color: #856341;
+}
