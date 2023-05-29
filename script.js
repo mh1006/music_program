@@ -1,5 +1,6 @@
 
 var volumeSlider = document.getElementById("musicVolume");
+var lastPlaying = false;
 
 var musicFiles = [
     'music/圖書館.mp3',
@@ -11,48 +12,58 @@ var musicFiles = [
     'music/路上.mp3'
 ];
 
-function play() {
-    var music = document.getElementById("music");
-    music.loop = true; // Set the loop property to true
-    music.play();
-}
-
-function pause() {
-    var music = document.getElementById("music");
-    music.pause();
-}
-
 function adjustVolume(volume) {
+    var audio = document.getElementById('audioPlayer');
     var volume = volumeSlider.value / 100; // Convert range 1-100 to 0.01-1
-    music.volume = volume;
+    audio.volume = volume;
 }
 
-function toggleSound(audioId) {
+function adjustVolume(audioId, sliderId) {
     var audio = document.getElementById(audioId);
-    if (audio.paused) {
+    var slider = document.getElementById(sliderId);
+    var volume = slider.value / 100;
+    
+    audio.volume = volume;
+  }
+
+  function toggleSound(audioId, containerId) {
+    var audio = document.getElementById(audioId);
+    var container = document.getElementById(containerId);
+  
+    if (container.style.display === 'none') {
+      container.style.display = 'block';
+      audio.loop = true;
       audio.play();
     } else {
+      container.style.display = 'none';
+      audio.loop = false;
       audio.pause();
     }
-}
-
-var button = document.querySelector('.play-pause-button');
-
-function pausePlayBtnSound() {
+  }
+  
+  
+  var button = document.querySelector('.play-pause-button');
+  
+  function pausePlayBtnSound() {
     var audio = document.getElementById('audioPlayer');
     var playPauseIcon = document.getElementById('playPauseIcon');
   
     if (audio.paused) {
       audio.src = musicFiles[num];
       audio.play();
+      audio.loop = true; 
       playPauseIcon.classList.remove('fa-play');
       playPauseIcon.classList.add('fa-pause');
+      lastPlaying = true;
     } else {
       audio.pause();
+      audio.loop = false; 
       playPauseIcon.classList.remove('fa-pause');
       playPauseIcon.classList.add('fa-play');
+      lastPlaying = false;
     }
-}
+  }
+  
 
 volumeSlider.addEventListener("input", adjustVolume);
 
@@ -75,6 +86,10 @@ btnnex.addEventListener("click", picprev);
 function picprev(){
 
     // pic.src = "Picture/pic1.jpg";
+
+    if(lastPlaying) {
+        pausePlayBtnSound();
+    };
     ++num;
     num = num % numOfMusic;
     displayCurrentlyPlaying();
@@ -83,6 +98,10 @@ function picprev(){
 function picnext(){
 
     // pic.src = "Picture/pic2.jpg";
+
+    if(lastPlaying) {
+        pausePlayBtnSound();
+    };
     --num;
     num = num % numOfMusic;
     displayCurrentlyPlaying();

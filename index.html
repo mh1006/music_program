@@ -4,9 +4,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <div class="topnav">
             <a class="active" href="#home">頻率</a>
-            <a onclick="toggleSound('freq1')">432</a>
-            <a onclick="toggleSound('freq2')">binaural</a>
-            <a onclick="toggleSound('freq3')">528</a>
+            <a onclick="toggleSound('freq1', 'slidecontainer1')">432</a>
+            <a onclick="toggleSound('freq2', 'slidecontainer2')">binaural</a>
+            <a onclick="toggleSound('freq3', 'slidecontainer3')">528</a>
         </div>
         <!--
         <aside>
@@ -55,7 +55,20 @@
             <p>音量: <span id="demo"></span>
             </p>
         </div>
-        </div>
+        <div class="slidecontainer" id="slidecontainer1" style="display: none;">
+            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume1" oninput="adjustVolume('freq1', 'musicVolume1')">
+            <p>音量: <span id="demo1"></span></p>
+          </div>
+          
+          <div class="slidecontainer" id="slidecontainer2" style="display: none;">
+            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume2" oninput="adjustVolume('freq2', 'musicVolume2')">
+            <p>音量: <span id="demo2"></span></p>
+          </div>
+          
+          <div class="slidecontainer" id="slidecontainer3" style="display: none;">
+            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume3" oninput="adjustVolume('freq3', 'musicVolume3')">
+            <p>音量: <span id="demo3"></span></p>
+          </div>
         <script>
             var slider = document.getElementById("musicVolume");
             var output = document.getElementById("demo");
