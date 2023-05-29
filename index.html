@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <div class="topnav">
             <a class="active" href="#home">頻率</a>
-            <a href="">20</a>
-            <a href="">25</a>
-            <a href="">30</a>
+            <a onclick="toggleSound('freq1')">432</a>
+            <a onclick="toggleSound('freq2')">binaural</a>
+            <a onclick="toggleSound('freq3')">528</a>
         </div>
         <!--
         <aside>
@@ -37,9 +38,14 @@
        <p>場景切換</p>
     -->
         <div align="center">
+            <p id="currentlyPlaying">currently playing: /music/圖書館.mp3</p>
+        </div>
+
+        <div align="center">
             <button class="buttona button1" id="btnpre">ᐊ</button>
-            <button onclick="play()">Play</button>
-            <button onclick="pause()">Pause</button>
+            <button id="playPauseButton" class="play-pause-button" onclick="pausePlayBtnSound()">
+                <i id="playPauseIcon" class="fas"></i>
+            </button>
             <button class="buttona button1" id="btnnex">ᐅ</button>
         </div>
        
@@ -58,9 +64,10 @@
                 output.innerHTML = this.value;
             }
         </script>
-        <audio id="music" src="/music/music1.mp3"></audio>
-        <audio id="freq1" src="/frequencies/freq1.mp3"></audio>
-        <audio id="freq2" src="/frequencies/freq2.mp3"></audio>
+        <audio id="audioPlayer"></audio>
+        <audio id="freq1" src="/frequencies/freq1.wav"></audio>
+        <audio id="freq2" src="/frequencies/freq2.wav"></audio>
+        <audio id="freq3" src="/frequencies/freq3.wav"></audio>
         <script src="script.js"></script>
     </body>
 </html>

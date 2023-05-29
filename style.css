@@ -92,6 +92,37 @@ html {
     color: white;
 }
 */
+.play-pause-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-pause-button i {
+  font-size: 24px;
+  color: #333;
+  transition: transform 0.2s ease-in-out;
+}
+
+.play-pause-button:hover i {
+  transform: scale(1.2);
+}
+
+.play-pause-button.playing i::before {
+  content: "\f28b";
+}
+
+.play-pause-button:not(.playing) i::before {
+  content: "\f144";
+}
+
+
 .buttona {
     border: none;
     background-color: white;
