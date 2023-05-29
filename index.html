@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <div class="topnav">
+            <a class="active" href="#home">頻率</a>
+            <a href="">20</a>
+            <a href="">25</a>
+            <a href="">30</a>
+        </div>
+        <!--
         <aside>
             <p style="color:white;">按鈕選擇音頻</p>
             <a href="A.html">A</a>
@@ -13,31 +20,34 @@
             <button class="buttona button3" onclick="freq3()">30</button>
             <br>
         </aside>
+        -->
         <h1>白噪音</h1>
         <p></p>
         <link href="style.css" rel="stylesheet" type="text/css" />
        
     </head>
     <body>
-        
+        <!--
         <picture>
             <source media="(min-width:650px)" srcset="Picture/pic1.jpg">
             <source media="(min-width:465px)" srcset="Picture/pic1.jpg">
             <img src="Picture/pic1.jpg" id="pic" alt="Pics" style="width: 50%;">
         </picture>
+        -->
        <p>場景切換</p>
         <div align="center">
-            <button class="button button1" id="btnpre">上一個</button>
+            <button class="buttona button1" id="btnpre">ᐊ</button>
             <button onclick="play()">Play</button>
             <button onclick="pause()">Pause</button>
-            <button class="button button2" id="btnnex">下一個</button>
+            <button class="buttona button2" id="btnnex">ᐅ</button>
         </div>
        
-        
+        <div align="center">
         <div class="slidecontainer">
             <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume">
             <p>音量: <span id="demo"></span>
             </p>
+        </div>
         </div>
         <script>
             var slider = document.getElementById("musicVolume");
