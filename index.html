@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <div class="topnav">
-            <a class="active" href="">頻率</a>
+            <a class="active" href="">Frequency:</a>
             <a onclick="toggleSound('freq1', 'slidecontainer1')">432</a>
             <a onclick="toggleSound('freq2', 'slidecontainer2')">binaural</a>
             <a onclick="toggleSound('freq3', 'slidecontainer3')">528</a>
@@ -22,7 +22,7 @@
             <br>
         </aside>
         -->
-        <h1>白噪音</h1>
+        <h1>White Noise</h1>
         <p></p>
         <link href="style.css" rel="stylesheet" type="text/css" />
        
@@ -43,22 +43,22 @@
         <div align="center">
         <div class="slidecontainer" id="slidecontainer">
             <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume"  oninput="adjustVolume('audioPlayer', 'musicVolume', 'demo')">
-            <p>背景音音量: <span id="demo">50</span>
+            <p>background sound volume: <span id="demo">50</span>
             </p>
         </div>
         <div class="slidecontainer" id="slidecontainer1" style="display: none;">
             <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume1" oninput="adjustVolume('freq1', 'musicVolume1', 'demo1')">
-            <p>432音量: <span id="demo1">50</span></p>
+            <p>432's volume: <span id="demo1">50</span></p>
           </div>
           
           <div class="slidecontainer" id="slidecontainer2" style="display: none;">
             <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume2" oninput="adjustVolume('freq2', 'musicVolume2', 'demo2')">
-            <p>binaural音量: <span id="demo2">50</span></p>
+            <p>binaural's volume: <span id="demo2">50</span></p>
           </div>
           
           <div class="slidecontainer" id="slidecontainer3" style="display: none;">
             <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume3" oninput="adjustVolume('freq3', 'musicVolume3', 'demo3')">
-            <p>528音量: <span id="demo3">50</span></p>
+            <p>528's volume: <span id="demo3">50</span></p>
           </div>
         <audio id="audioPlayer"></audio>
         <audio id="freq1" src="/frequencies/freq1.wav"></audio>
