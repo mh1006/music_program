@@ -16,7 +16,7 @@ var picFiles = [
     'Picture/海浪2.JPG',
     'Picture/淡水老街.JPG',
     'Picture/淡水老街2.JPG',
-    'Picture/發電機.JPG',
+    'Picture/發電機.jpeg',
     'Picture/路上.JPG'
 ];
 
