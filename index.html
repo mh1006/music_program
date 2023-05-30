@@ -4,9 +4,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <div class="topnav">
             <a class="active" href="">Frequency:</a>
-            <a onclick="toggleSound('freq1', 'slidecontainer1')">432</a>
-            <a onclick="toggleSound('freq2', 'slidecontainer2')">binaural</a>
-            <a onclick="toggleSound('freq3', 'slidecontainer3')">528</a>
+            <a onclick="toggleSound('freq1', 'slidecontainer1')">23</a>
+            <a onclick="toggleSound('freq2', 'slidecontainer2')">25</a>
+            <a onclick="toggleSound('freq3', 'slidecontainer3')">27</a>
+            <a onclick="toggleSound('freq4', 'slidecontainer4')">30</a>
         </div>
         <!--
         <aside>
@@ -48,22 +49,28 @@
         </div>
         <div class="slidecontainer" id="slidecontainer1" style="display: none;">
             <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume1" oninput="adjustVolume('freq1', 'musicVolume1', 'demo1')">
-            <p>432's volume: <span id="demo1">50</span></p>
+            <p>23hz volume: <span id="demo1">50</span></p>
           </div>
           
           <div class="slidecontainer" id="slidecontainer2" style="display: none;">
             <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume2" oninput="adjustVolume('freq2', 'musicVolume2', 'demo2')">
-            <p>binaural's volume: <span id="demo2">50</span></p>
+            <p>25hz volume: <span id="demo2">50</span></p>
           </div>
           
           <div class="slidecontainer" id="slidecontainer3" style="display: none;">
             <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume3" oninput="adjustVolume('freq3', 'musicVolume3', 'demo3')">
-            <p>528's volume: <span id="demo3">50</span></p>
+            <p>27hz volume: <span id="demo3">50</span></p>
+          </div>
+
+          <div class="slidecontainer" id="slidecontainer4" style="display: none;">
+            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume4" oninput="adjustVolume('freq3', 'musicVolume3', 'demo3')">
+            <p>30hz volume: <span id="demo3">50</span></p>
           </div>
         <audio id="audioPlayer"></audio>
         <audio id="freq1" src="/frequencies/freq1.wav"></audio>
         <audio id="freq2" src="/frequencies/freq2.wav"></audio>
         <audio id="freq3" src="/frequencies/freq3.wav"></audio>
+        <audio id="freq4" src="/frequencies/freq4.wav"></audio>
         <script src="script.js"></script>
     </body>
 </html>
