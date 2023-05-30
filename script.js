@@ -10,6 +10,16 @@ var musicFiles = [
     'music/路上.mp3'
 ];
 
+var picFiles = [
+    'Picture/圖書館.JPG',
+    'Picture/海浪1.JPG',
+    'Picture/海浪2.JPG',
+    'Picture/淡水老街.JPG',
+    'Picture/淡水老街2.JPG',
+    'Picture/發電機.JPG',
+    'Picture/路上.JPG'
+];
+
 function adjustVolume(audioId, sliderId, outputId) {
     var audio = document.getElementById(audioId);
     var slider = document.getElementById(sliderId);
@@ -83,6 +93,8 @@ function picprev(){
     ++num;
     num = num % numOfMusic;
     displayCurrentlyPlaying();
+    var el = document.getElementById('body');
+    el.style.backgroundImage = "url(" + picFiles[num] + ")" ;
     
 }
 function picnext(){
@@ -95,6 +107,8 @@ function picnext(){
     --num;
     num = num % numOfMusic;
     displayCurrentlyPlaying();
+    var el = document.getElementById('body');
+    el.style.backgroundImage = "url(" + picFiles[num] + ")";
 }
 
 //https://medium.com/ken-ken-%E8%BE%B2%E5%A0%B4/%E7%85%A7%E7%89%87%E7%89%86%E5%88%87%E6%8F%9B-%E5%9F%BA%E7%A4%8E%E7%AF%87-7-e5fba813df9f
