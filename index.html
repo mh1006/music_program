@@ -50,33 +50,25 @@
         </div>
        
         <div align="center">
-        <div class="slidecontainer">
-            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume">
-            <p>音量: <span id="demo"></span>
+        <div class="slidecontainer" id="slidecontainer">
+            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume"  oninput="adjustVolume('audioPlayer', 'musicVolume', 'demo')">
+            <p>音量: <span id="demo">50</span>
             </p>
         </div>
         <div class="slidecontainer" id="slidecontainer1" style="display: none;">
-            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume1" oninput="adjustVolume('freq1', 'musicVolume1')">
-            <p>音量: <span id="demo1"></span></p>
+            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume1" oninput="adjustVolume('freq1', 'musicVolume1', 'demo1')">
+            <p>音量: <span id="demo1">50</span></p>
           </div>
           
           <div class="slidecontainer" id="slidecontainer2" style="display: none;">
-            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume2" oninput="adjustVolume('freq2', 'musicVolume2')">
-            <p>音量: <span id="demo2"></span></p>
+            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume2" oninput="adjustVolume('freq2', 'musicVolume2', 'demo2')">
+            <p>音量: <span id="demo2">50</span></p>
           </div>
           
           <div class="slidecontainer" id="slidecontainer3" style="display: none;">
-            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume3" oninput="adjustVolume('freq3', 'musicVolume3')">
-            <p>音量: <span id="demo3"></span></p>
+            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume3" oninput="adjustVolume('freq3', 'musicVolume3', 'demo3')">
+            <p>音量: <span id="demo3">50</span></p>
           </div>
-        <script>
-            var slider = document.getElementById("musicVolume");
-            var output = document.getElementById("demo");
-            output.innerHTML = slider.value;
-            slider.oninput = function() {
-                output.innerHTML = this.value;
-            }
-        </script>
         <audio id="audioPlayer"></audio>
         <audio id="freq1" src="/frequencies/freq1.wav"></audio>
         <audio id="freq2" src="/frequencies/freq2.wav"></audio>
